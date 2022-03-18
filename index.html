@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="manifest" href="./manifest.json">
     <title>TT</title>
 </head>
+
 <body>
     <header>
         <h1>Double T</h1>
     </header>
     <div class="training-selector">
         <button class="active" id="yourTraining" onclick="location.reload()">Dein Training</button>
-        <button class="unactive" id="trainings" onclick="window.location.href = './trainings/trainings.html';">Trainings</button>
+        <button class="unactive" id="trainings"
+            onclick="window.location.href = './trainings/trainings.html';">Trainings</button>
     </div>
     <main>
         <div class="info">
@@ -42,10 +46,12 @@
             <img src="./img/remove.png" alt="" onclick="removeNotification()">
         </div>
         <h4 id="caption">Leider hast du gerade keine Internetverbindung</h4>
-        <p id="not-text">Versuche es doch etwas später nochmal, oder aktiviere deine mobilen Daten, oder dein WLAN. Alternativ könntest du nach einem Hotspot fragen.</p>
+        <p id="not-text">Versuche es doch etwas später nochmal, oder aktiviere deine mobilen Daten, oder dein WLAN.
+            Alternativ könntest du nach einem Hotspot fragen.</p>
     </div>
     <script src="./main.js"></script>
     <script src="./online.js"></script>
     <script src="./timer.js"></script>
 </body>
+
 </html>
