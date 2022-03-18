@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./trainings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <title>TT</title>
+</head>
+<body>
+    <header>
+        <h1>Trainings</h1>
+    </header>
+    <div class="training-selector">
+        <button class="unactive" id="yourTraining" onclick="history.back()">Dein Training</button>
+        <button class="active" id="trainings" onclick="location.reload()">Trainings</button>
+    </div>
+    <main>        <div class="info">
+            <div class="date">
+                <h2 id="dateh2"></h2>
+            </div>
+            <div class="icon"><img src="" alt="Tag" id="daytimeicon"></div>
+        </div>
+        <div class="select-workout" id="select-workout">
+            <button class="" id="b1" onclick="getExersize('warmup')">Warm Up</button>
+            <button class="" id="b2" onclick="getExersize('kraft')">Kraft</button>
+            <button class="" id="b3" onclick="getExersize('koordination')">Koordination</button>
+            <button class="" id="b4" onclick="getExersize('beweglichkeit')">Beweglichkeit</button>
+            <button class="" id="b5" onclick="getExersize('ausdauer')">Ausdauer</button>
+            <button class="" id="b6" onclick="getExersize('cooldown')">Cool Down</button>
+        </div>
+
+        <div class="boxes" id="boxes">
+        </div>
+        
+    </main>
+    <div class="stats">
+
+            <div class="warm-up-stats stat">
+                <h1>Warm Up</h1>
+                <h2 id="warmup_score">Score: 69</h2>
+            </div>
+            <div class="kraft-stats stat">
+                <h1>Kraft</h1>
+                <h2 id="kraft_score">Score: 420</h2>
+            </div>
+            <div class="koordination-stats stat">
+                <h1>Koordination</h1>
+                <h2 id="koordination_score">Score: 69</h2>
+            </div>
+            <div class="beweglichkeit-stats stat">
+                <h1>Beweglichkeit</h1>
+                <h2 id="beweglichkeit_score">Score: 69</h2>
+            </div>
+            <div class="ausdauer-stats stat">
+                <h1>Ausdauer</h1>
+                <h2 id="ausdauer_score">Score: 69</h2>
+            </div>
+            <div class="cool-down-stats stat">
+                <h1>Cool Down</h1>
+                <h2 id="cooldown_score">Score: 69</h2>
+            </div>
+        </div>
+    <div class="notification invisible" id="notification">
+        <div class="headline" id="not-headline">
+            <h3 id="off">OFFLINE</h3>
+            <img src="./img/remove.png" alt="" onclick="removeNotification()">
+        </div>
+        <h4 id="caption">Leider hast du gerade keine Internetverbindung</h4>
+        <p id="not-text">Versuche es doch etwas später nochmal, oder aktiviere deine mobilen Daten, oder dein WLAN. Alternativ könntest du nach einem Hotspot fragen.</p>
+    </div>
+    <script src="./trainings.js"></script>
+    <script>
+        //HTML DOM
+let main = document.querySelector("main")
+let pageName = document.querySelector("header")
+let line = document.querySelector(".training-selector")
+
+if(window.navigator.onLine == false){
+    document.getElementById("notification").classList.remove('invisible')
+    main.classList.add('blur')
+    line.classList.add('blur')
+    pageName.classList.add('blur')
+}
+
+function removeNotification(){
+    main.classList.remove('blur')
+    line.classList.remove('blur')
+    pageName.classList.remove('blur')
+    document.getElementById("notification").classList.add('invisible')
+    timerStarted = false
+        body.style.overflow = ""
+        ringtone.pause();
+        ringtone.currentTime = 0;
+        funcCounter++
+        return
+}
+    </script>
+    <script src="./training-timer.js"></script>
+    <script src="./scores.js"></script>
+</body>
+</html>

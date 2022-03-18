@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <title>TT</title>
+</head>
+<body>
+    <header>
+        <h1>Double T</h1>
+    </header>
+    <div class="training-selector">
+        <button class="active" id="yourTraining" onclick="location.reload()">Dein Training</button>
+        <button class="unactive" id="trainings" onclick="window.location.href = './trainings/trainings.html';">Trainings</button>
+    </div>
+    <main>
+        <div class="info">
+            <div class="date">
+                <h2 id="dateh2"></h2>
+            </div>
+            <div class="icon"><img src="" alt="Tag" id="daytimeicon"></div>
+        </div>
+        <div class="status">
+            <div class="status-text">
+                <h2 id="status-text-h2">Status: </h2>
+            </div>
+            <div class="icon" style="text-align: center;">
+                <h1 id="status-icon"></h1>
+            </div>
+        </div>
+        <div class="boxes" id="boxes">
+        </div>
+    </main>
+    <div class="notification invisible" id="notification">
+        <div class="headline" id="not-headline">
+            <h3 id="off">OFFLINE</h3>
+            <img src="./img/remove.png" alt="" onclick="removeNotification()">
+        </div>
+        <h4 id="caption">Leider hast du gerade keine Internetverbindung</h4>
+        <p id="not-text">Versuche es doch etwas später nochmal, oder aktiviere deine mobilen Daten, oder dein WLAN. Alternativ könntest du nach einem Hotspot fragen.</p>
+    </div>
+    <script src="./main.js"></script>
+    <script src="./online.js"></script>
+    <script src="./timer.js"></script>
+</body>
+</html>
